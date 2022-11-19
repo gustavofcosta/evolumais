@@ -13,6 +13,7 @@ const Footer = () => {
         className="w-full h-full object-cover"
         src="/video/bg-video.mp4"
       />
+
       <div className="absolute top-0 w-[90%] mx-auto pt-10">
         <div className="flex justify-between ">
           <nav className="">
