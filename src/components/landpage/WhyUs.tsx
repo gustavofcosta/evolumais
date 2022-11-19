@@ -46,14 +46,8 @@ function WhyUs() {
                   : "translate-y-56 opacity-0"
               }`}
             >
-              <figure className="h-12 w-12 mt-10  md:h-14 md:w-14">
-                <img
-                  className="w-full"
-                  src={icon}
-                  alt={name}
-                  height={10}
-                  width={10}
-                />
+              <figure className="h-8 w-8 mt-10">
+                <img className="w-full" src={icon} alt={name} />
               </figure>
               <h3 className="font-semibold md:text-lg">{name}</h3>
               <p className="text-center px-4 pb-12 md:px-20 md:text-lg lg:px-10">

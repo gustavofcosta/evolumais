@@ -1,23 +1,31 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+interface IFormInput {
+  name: string;
+  email: string;
+  message: string;
+}
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<IFormInput>();
+
   const [loading, setLoading] = useState(false);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
-    setLoading(true);
-    e.preventDefault();
-
-    //Logica de envio de dados para o backend
-    console.log(name, email, message);
-
-    setLoading(false);
-    setName("");
-    setEmail("");
-    setMessage("");
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    setName(data.name);
+    setEmail(data.email);
+    setMessage(data.message);
   };
 
   return (
@@ -75,36 +83,67 @@ const Contact = () => {
         <h1 className="text-right uppercase text-4xl mb-10 lg:mb-32">
           Fale conosco
         </h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col space-y-2">
             <div className="lg:flex lg:gap-10 ">
               <label htmlFor="name">
                 <p className="uppercase">Nome</p>
                 <input
-                  className=" bg-inherit border-b border-gray-50 h-7 lg:h-10 focus:outline-none focus:border-b focus:border-secondary_500 mb-2 text-gray-400"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  className="bg-inherit border-b border-gray-50 h-7 lg:h-10 focus:outline-none focus:border-b focus:border-secondary_500 mb-1 text-gray-400 w-full"
+                  {...register("name", {
+                    required: true,
+                    maxLength: 20,
+                    pattern: /([A-Za-z]\s?){3,20}$/g,
+                  })}
                 />
+                {errors?.name?.type === "required" && (
+                  <p className="error">Este campo é obrigatório</p>
+                )}
+                {errors.name?.type === "maxLength" && (
+                  <p className="error">
+                    Nome não pode ser maior que 20 caracteres
+                  </p>
+                )}
+                {errors.name?.type === "pattern" && (
+                  <p className="error">Somente letras alfabéticas</p>
+                )}
               </label>
               <label htmlFor="email">
                 <p className="uppercase">Email</p>
                 <input
-                  className=" bg-inherit border-b border-gray-50 h-7 lg:h-10 focus:outline-none focus:border-b focus:border-secondary_500 text-gray-400"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  className="mb-1 bg-inherit border-b border-gray-50 h-7 lg:h-10 w-full focus:outline-none focus:border-b focus:border-secondary_500 text-gray-400"
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                  })}
                 />
+                {errors?.email?.type === "required" && (
+                  <p className="error">Este campo é obrigatório</p>
+                )}
+                {errors?.email?.type === "pattern" && (
+                  <p className="error">E-mail invalido</p>
+                )}
               </label>
             </div>
             <label htmlFor="message">
               <p className="uppercase ">Mensagem</p>
               <textarea
                 className="w-full h-36 bg-inherit border-b border-gray-50 focus:outline-none focus:border-b focus:border-secondary_500 lg:h-28 text-gray-400"
-                name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                {...register("message", {
+                  required: true,
+                  minLength: 100,
+                  maxLength: 800,
+                })}
               />
+              {errors?.message?.type === "required" && (
+                <p className="error">Este campo é obrigatório</p>
+              )}
+              {errors.message?.type === "minLength" && (
+                <p className="error">Não pode ser menor que 100 caracteres</p>
+              )}
+              {errors.message?.type === "maxLength" && (
+                <p className="error">Não pode ser maior que 800 caracteres</p>
+              )}
             </label>
           </div>
           <button

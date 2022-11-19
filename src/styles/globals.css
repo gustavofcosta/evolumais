@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
+  display: none;
 }
 
 @layer base {
@@ -18,7 +19,7 @@
 }
 
 .error {
-  @apply bg-colorRedLight text-colorRedDark w-80 p-1 text-xs;
+  @apply bg-colorRedLight text-colorRedDark w-full p-1 text-xs;
 }
 
 .inputRadio {
