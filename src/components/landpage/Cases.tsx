@@ -28,7 +28,7 @@ const Cases = () => {
         </figure>
       </div>
       <div className="absolute z-10  right-5 md:bottom-20 md:right-24">
-        <button className=" text-sm p-1 px-2 font-bold uppercase rounded-full bg-secondary_500 hover:bg-secondary_400  transition duration-200 md:text-lg md:px-4 md:p-2  lg:text-2xl lg:px-8 lg:p-4">
+        <button className=" text-sm p-2 px-4 font-bold uppercase rounded-full bg-secondary_500 hover:bg-secondary_400  transition duration-200 md:text-lg md:px-4 md:p-2  lg:text-lg lg:px-6 lg:p-2">
           Ver todos
         </button>
       </div>
