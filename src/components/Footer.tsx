@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context/appContext";
 
 const Footer = () => {
@@ -25,7 +26,7 @@ const Footer = () => {
                 );
               })}
               <li className="text-white font-bold text-sm md:text-lg lg:text-xl hover:text-secondary_500 transition-all duration-500">
-                <a href="/contact">Contato</a>
+                <Link to="/contact">Contato</Link>
               </li>
               {/* <li className="text-white font-bold text-sm md:text-lg lg:text-xl hover:text-secondary_500 transition-all duration-500">
                 <a href="/budget">Orçamento</a>

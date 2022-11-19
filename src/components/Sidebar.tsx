@@ -1,4 +1,5 @@
 import { X } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 import { useGlobalContext } from "../context/appContext";
 
@@ -32,7 +33,7 @@ const Sidebar = () => {
                 onClick={toggleSidebar}
                 className="text-white font-medium text-lg md:text-2xl hover:text-secondary_500 transition-all duration-500 hover:text-xl md:hover:text-3xl"
               >
-                <a href="/contact">Contato</a>
+                <Link to="/contact">Contato</Link>
               </li>
               {/*<li
                 onClick={toggleSidebar}
