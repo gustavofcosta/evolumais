@@ -6,8 +6,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="fixed mt-4 mr-4 lg:mt-8 lg:mr-8 right-0 z-30 ">
-        <button className="h-12 w-12 md:h-16 md:w-16">
+      <div className="fixed mt-4 mr-3 lg:mt-8 lg:mr-5 right-0 z-30 ">
+        <button className="h-12 w-12">
           <img
             src="/images/menu.svg"
             alt="Menu"
