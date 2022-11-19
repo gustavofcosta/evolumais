@@ -7,6 +7,7 @@ module.exports = {
         // Colors Default
         black: "#222",
         white: "#FFFF",
+        bgGray: "#f3f3f3",
         backGroundColor: "#F1F1F2",
         textColor: "#1e293b",
 

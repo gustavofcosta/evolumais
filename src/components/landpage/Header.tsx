@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 const Header = () => {
   return (
-    <header className="w-screen h-screen relative overflow-hidden">
+    <header id="home" className="w-screen h-screen relative overflow-hidden ">
       <video
         autoPlay
         muted

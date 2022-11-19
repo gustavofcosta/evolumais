@@ -10,10 +10,10 @@ function WhatWeDo() {
   const isInView1 = useInView(ref1, { once: true });
 
   return (
-    <div id="whatWeDo" className=" mb-10 md:mb-20">
+    <div id="whatWeDo" className=" pb-10 md:pb-20">
       <div
         ref={ref1}
-        className={`w-56 ml-12 mt-28 text-xl leading-8 md:w-96 md:ml-48 md:text-3xl transition-all duration-700 ${
+        className={`w-56 ml-12  text-xl leading-8 md:w-96 md:ml-48 md:text-3xl transition-all duration-700 ${
           isInView1 ? "translate-x-0 opacity-1" : "-translate-x-full opacity-0"
         }`}
       >

@@ -15,11 +15,11 @@ function WhyUs() {
   const isInView3 = useInView(ref2, { once: true });
 
   return (
-    <div>
+    <div className="bg-white pt-20 pb-20">
       <div
         ref={ref1}
         id="whyUs"
-        className={`w-40 ml-12 mt-8 text-xl leading-8 md:w-60 md:ml-48 md:text-4xl lg:ml-96 transition-all duration-700 ${
+        className={`w-40 ml-12 text-xl leading-8 md:w-60 md:ml-48 md:text-4xl lg:ml-96 transition-all duration-700 ${
           isInView1 ? "translate-x-0 opacity-1" : "-translate-x-full opacity-0"
         }`}
       >
