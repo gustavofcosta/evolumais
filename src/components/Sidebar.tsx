@@ -34,12 +34,12 @@ const Sidebar = () => {
               >
                 <a href="/contact">Contato</a>
               </li>
-              <li
+              {/*<li
                 onClick={toggleSidebar}
                 className="text-white font-medium text-lg md:text-2xl hover:text-secondary_500 transition-all duration-500 hover:text-xl md:hover:text-3xl"
               >
                 <a href="/budget">Orçamento</a>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <figure>

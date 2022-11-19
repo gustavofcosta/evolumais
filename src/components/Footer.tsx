@@ -27,9 +27,9 @@ const Footer = () => {
               <li className="text-white font-bold text-sm md:text-lg lg:text-xl hover:text-secondary_500 transition-all duration-500">
                 <a href="/contact">Contato</a>
               </li>
-              <li className="text-white font-bold text-sm md:text-lg lg:text-xl hover:text-secondary_500 transition-all duration-500">
+              {/* <li className="text-white font-bold text-sm md:text-lg lg:text-xl hover:text-secondary_500 transition-all duration-500">
                 <a href="/budget">Orçamento</a>
-              </li>
+            </li> */}
             </ul>
           </nav>
           <ul className="space-y-8 md:space-y-10 text-sm md:text-lg lg:text-xl ">
