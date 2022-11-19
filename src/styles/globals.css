@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer base {
+  html {
+    @apply bg-backGroundColor;
+    scroll-behavior: smooth;
+    background-color: #f5f5f5;
+  }
+}
+
+.input {
+  @apply text-center bg-inherit border-b h-10 w-80 lg:h-14 focus:outline-none focus:border-b border-primary_500 focus:border-secondary_500 mb-2 text-gray-600;
+}
+
+.error {
+  @apply bg-colorRedLight text-colorRedDark w-80 p-1 text-xs;
+}
+
+.inputRadio {
+  @apply text-center bg-inherit border-b h-4 w-4 focus:outline-none focus:border-b border-primary_500 focus:border-secondary_500 mb-2 text-gray-600;
+}
+
+.inputTextArea {
+  @apply text-left bg-inherit border-b  w-80  focus:outline-none focus:border-b border-primary_500 focus:border-secondary_500 mb-2 text-gray-600;
+}
