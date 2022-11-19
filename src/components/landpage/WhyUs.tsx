@@ -39,7 +39,7 @@ function WhyUs() {
               ref={ref3}
               key={id}
               className={`flex flex-col justify-center items-center border border-slate-300 space-y-8 rounded-3xl shadow-md 
-              shadow-secondary_500 bg-backGroundColor transition delay-700 duration-1000
+              shadow-secondary_500 bg-bgGray transition delay-700 duration-1000
               ${
                 isInView3
                   ? "translate-y-0 opacity-1 "
