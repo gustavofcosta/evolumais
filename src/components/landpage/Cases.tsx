@@ -2,7 +2,7 @@ import { CaretDoubleLeft, CaretDoubleRight } from "phosphor-react";
 
 const Cases = () => {
   return (
-    <div id="cases" className="relative bg-bgGray min-h-[310px]">
+    <div id="cases" className="relative bg-bgGray min-h-[380px]">
       <div className="absolute left-0 z-10 h-full flex items-center ml-6 lg:ml-14 ">
         <CaretDoubleLeft
           className="h-10 w-10 lg:h-16 lg:w-16 cursor-pointer hover:text-secondary_500 transition duration-200 animate-pulse"
